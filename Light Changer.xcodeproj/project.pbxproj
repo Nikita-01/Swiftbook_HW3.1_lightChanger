@@ -11,6 +11,7 @@
 		6B0C40A12799B7A700381F9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C40A02799B7A700381F9D /* ContentView.swift */; };
 		6B0C40A32799B7A900381F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C40A22799B7A900381F9D /* Assets.xcassets */; };
 		6B0C40A62799B7A900381F9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C40A52799B7A900381F9D /* Preview Assets.xcassets */; };
+		6B0C40AD2799B9AB00381F9D /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C40AC2799B9AB00381F9D /* ColorCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6B0C40A02799B7A700381F9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B0C40A22799B7A900381F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B0C40A52799B7A900381F9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B0C40AC2799B9AB00381F9D /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				6B0C409E2799B7A700381F9D /* Light_ChangerApp.swift */,
 				6B0C40A02799B7A700381F9D /* ContentView.swift */,
+				6B0C40AC2799B9AB00381F9D /* ColorCircleView.swift */,
 				6B0C40A22799B7A900381F9D /* Assets.xcassets */,
 				6B0C40A42799B7A900381F9D /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0C40AD2799B9AB00381F9D /* ColorCircleView.swift in Sources */,
 				6B0C40A12799B7A700381F9D /* ContentView.swift in Sources */,
 				6B0C409F2799B7A700381F9D /* Light_ChangerApp.swift in Sources */,
 			);
