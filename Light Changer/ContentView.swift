@@ -7,42 +7,54 @@
 
 import SwiftUI
 
+private let lightIsOn = 1.0
+private let lightIsOff = 0.3
+
 struct ContentView: View {
-    @State var title = "Start"
-    @State var redAlpha = 0.3
-    @State var yellowAlpha = 0.3
-    @State var greenAlpha = 0.3
+    @State var buttonTitle = "START"
+    @State var redLight = lightIsOff
+    @State var yellowLight = lightIsOff
+    @State var greenLight = lightIsOff
     @State var lightColor = "red"
     
+    
     var body: some View {
-        VStack {
-            ColorCircleView(color: .red, alpha: redAlpha)
-            ColorCircleView(color: .yellow, alpha: yellowAlpha)
-            ColorCircleView(color: .green, alpha: greenAlpha)
-            Spacer()
-            Button(title) {
-                if title == "Start" {
-                    title = "Next"
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
+                ColorCircleView(color: .red, opacity: redLight)
+                ColorCircleView(color: .yellow, opacity: yellowLight)
+                ColorCircleView(color: .green, opacity: greenLight)
+                Spacer()
+                Button(buttonTitle) {
+                    if buttonTitle == "START" {
+                        buttonTitle = "NEXT"
+                    }
+                    switch lightColor {
+                    case "red":
+                        greenLight = lightIsOff
+                        redLight = lightIsOn
+                        lightColor = "yellow"
+                    case "yellow":
+                        redLight = lightIsOff
+                        yellowLight = lightIsOn
+                        lightColor = "green"
+                    case "green":
+                        yellowLight = lightIsOff
+                        greenLight = lightIsOn
+                        lightColor = "red"
+                    default: break
+                    }
                 }
-                switch lightColor {
-                case "red":
-                    greenAlpha = 0.3
-                    redAlpha = 1
-                    lightColor = "yellow"
-                case "yellow":
-                    redAlpha = 0.3
-                    yellowAlpha = 1
-                    lightColor = "green"
-                case "green":
-                    yellowAlpha = 0.3
-                    greenAlpha = 1
-                    lightColor = "red"
-                default: break
+                .font(.title)
+                .frame(minWidth: 150, minHeight: 50)
+                .foregroundColor(.white)
+                .background(.blue)
+                .cornerRadius(50)
             }
-                }
-            .font(.title)
+            .padding()
         }
-        .padding()
     }
 }
 
